@@ -2,7 +2,6 @@ const express = require("express");
 const bodyPaser = require("body-parser");
 const axios = require("axios");
 var cors = require("cors");
-//const { response } = require("express");
 const app = express();
 
 app.options("*", cors());
@@ -23,7 +22,7 @@ app.get("/api/rates", async (req, res) => {
   });
   xChange = {
     ...xChange,
-    EUR: 1,
+    EUR: 1
   };
   currencyArray.map((currency) => {
    if(currency.length > 3){
